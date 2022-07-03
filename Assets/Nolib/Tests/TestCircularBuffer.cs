@@ -6,7 +6,7 @@ namespace Tests
     public class TestCircularBuffer
     {
         [Test]
-        public void Test_Contains()
+        public void Contains_True_ForContainedElement()
         {
             var circularBuffer = new CircularBuffer<string>(1);
 
@@ -18,7 +18,7 @@ namespace Tests
         }
         
         [Test]
-        public void Test_PopHead_HeadEqualsTail_WhenBufferEmpty()
+        public void PopHead_HeadEqualsTail_WhenBufferEmpty()
         {
             var circularBuffer = new CircularBuffer<string>(3);
 
@@ -36,7 +36,7 @@ namespace Tests
         }
         
         [Test]
-        public void Test_PopHead_RemoveElement_FromTheHead()
+        public void PopHead_RemoveElement_FromTheHead()
         {
             var circularBuffer = new CircularBuffer<string>(2);
 
@@ -52,7 +52,7 @@ namespace Tests
         }
         
         [Test]
-        public void Test_PopTail_HeadEqualsTail_WhenBufferEmpty()
+        public void PopTail_HeadEqualsTail_WhenBufferEmpty()
         {
             var circularBuffer = new CircularBuffer<string>(3);
 
@@ -70,7 +70,7 @@ namespace Tests
         }
         
         [Test]
-        public void Test_PopTail_RemoveElement_FromTheTail()
+        public void PopTail_RemoveElement_FromTheTail()
         {
             var circularBuffer = new CircularBuffer<string>(2);
 
@@ -86,7 +86,7 @@ namespace Tests
         }
         
         [Test]
-        public void Test_PushHead_CirculateElement_WhenReachCapacity()
+        public void PushHead_CirculateElement_WhenReachCapacity()
         {
             var circularBuffer = new CircularBuffer<string>(3);
 
@@ -101,7 +101,7 @@ namespace Tests
         }
         
         [Test]
-        public void Test_PushHead_Grow_WhenBufferGrow()
+        public void PushHead_Grow_WhenBufferGrow()
         {
             var circularBuffer = new CircularBuffer<string>(3);
 
@@ -117,7 +117,7 @@ namespace Tests
         }
         
         [Test]
-        public void Test_PushTail_CirculateElement_WhenReachCapacity()
+        public void PushTail_CirculateElement_WhenReachCapacity()
         {
             var circularBuffer = new CircularBuffer<string>(3);
 
@@ -132,7 +132,7 @@ namespace Tests
         }
         
         [Test]
-        public void Test_PushTail_Grow_WhenBufferGrow()
+        public void PushTail_Grow_WhenBufferGrow()
         {
             var circularBuffer = new CircularBuffer<string>(3);
 
@@ -148,7 +148,7 @@ namespace Tests
         }
         
         [Test]
-        public void Test_ShrinkHead_ElementCount_Changed_WhenNotEnoughSpace()
+        public void ShrinkHead_ElementCount_Changed_WhenNotEnoughSpace()
         {
             var circularBuffer = new CircularBuffer<string>(2);
 
@@ -163,7 +163,7 @@ namespace Tests
         }
 
         [Test]
-        public void Test_ShrinkHead_ElementCount_Unchanged_WhenEnoughSpace()
+        public void ShrinkHead_ElementCount_Unchanged_WhenEnoughSpace()
         {
             var circularBuffer = new CircularBuffer<string>(3);
 
@@ -180,7 +180,7 @@ namespace Tests
         }
 
         [Test]
-        public void Test_ShrinkTail_ElementCount_Changed_WhenNotEnoughSpace()
+        public void ShrinkTail_ElementCount_Changed_WhenNotEnoughSpace()
         {
             var circularBuffer = new CircularBuffer<string>(2);
 
@@ -195,7 +195,7 @@ namespace Tests
         }
 
         [Test]
-        public void Test_ShrinkTail_ElementCount_Unchanged_WhenEnoughSpace()
+        public void ShrinkTail_ElementCount_Unchanged_WhenEnoughSpace()
         {
             var circularBuffer = new CircularBuffer<string>(3);
 
